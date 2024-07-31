@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/contribsys/faktory/storage"
-	"github.com/contribsys/faktory/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/yvjessestephens/faktory/storage"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 func runServer(binding string, runner func()) {

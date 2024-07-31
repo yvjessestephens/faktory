@@ -13,8 +13,8 @@ import "context"
 import (
 	"net/http"
 
-	"github.com/contribsys/faktory/client"
-	"github.com/contribsys/faktory/storage"
+	"github.com/yvjessestephens/faktory/client"
+	"github.com/yvjessestephens/faktory/storage"
 )
 
 func ego_listScheduled(w io.Writer, req *http.Request, set storage.SortedSet, count, currentPage uint64) {

@@ -16,11 +16,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/contribsys/faktory/cli"
-	"github.com/contribsys/faktory/client"
-	"github.com/contribsys/faktory/util"
-	"github.com/contribsys/faktory/webui"
 	"github.com/stretchr/testify/assert"
+	"github.com/yvjessestephens/faktory/cli"
+	"github.com/yvjessestephens/faktory/client"
+	"github.com/yvjessestephens/faktory/util"
+	"github.com/yvjessestephens/faktory/webui"
 )
 
 func TestSystem(t *testing.T) {

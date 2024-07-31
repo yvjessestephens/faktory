@@ -16,9 +16,9 @@ import (
 
 	"regexp"
 
-	"github.com/contribsys/faktory/client"
-	"github.com/contribsys/faktory/util"
 	"github.com/redis/go-redis/v9"
+	"github.com/yvjessestephens/faktory/client"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 type redisStore struct {

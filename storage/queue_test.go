@@ -7,8 +7,8 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/contribsys/faktory/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 func TestBasicQueueOps(t *testing.T) {

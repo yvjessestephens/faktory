@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/contribsys/faktory/server"
-	"github.com/contribsys/faktory/storage"
+	"github.com/yvjessestephens/faktory/server"
+	"github.com/yvjessestephens/faktory/storage"
 )
 
 type Context interface {

@@ -14,8 +14,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/contribsys/faktory/internal/pool"
-	"github.com/contribsys/faktory/util"
+	"github.com/yvjessestephens/faktory/internal/pool"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 const (
@@ -216,7 +216,7 @@ func dial(srv *Server, password string, dialer Dialer) (*Client, error) {
 	if err != nil {
 		return nil, err
 	}
-        util.Infof("faktory.client.dial line219 conn.LocalAddr %s conn.RemoteAddr %s", conn.LocalAddr().String(), conn.RemoteAddr().String())
+	util.Infof("faktory.client.dial line219 conn.LocalAddr %s conn.RemoteAddr %s", conn.LocalAddr().String(), conn.RemoteAddr().String())
 	if x, ok := conn.(*net.TCPConn); ok {
 		_ = x.SetKeepAlive(true)
 	}

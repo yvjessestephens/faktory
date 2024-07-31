@@ -3,7 +3,7 @@ package client
 import (
 	"fmt"
 
-	"github.com/contribsys/faktory/internal/pool"
+	"github.com/yvjessestephens/faktory/internal/pool"
 )
 
 type Pool struct {

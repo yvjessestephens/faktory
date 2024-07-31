@@ -5,7 +5,7 @@ import (
   "net/http"
   "runtime"
 
-  "github.com/contribsys/faktory/client"
+  "github.com/yvjessestephens/faktory/client"
 )
 
 func ego_debug(w io.Writer, req *http.Request) {
@@ -30,7 +30,7 @@ func ego_debug(w io.Writer, req *http.Request) {
           </select>
           <span style="font-size: small">
             Want to help us improve the translations?
-            <a href="https://github.com/contribsys/faktory/tree/master/webui/static/locales">Submit a PR</a>.
+            <a href="https://github.com/yvjessestephens/faktory/tree/master/webui/static/locales">Submit a PR</a>.
           </span>
         </td>
     </tr>
@@ -66,7 +66,7 @@ func ego_debug(w io.Writer, req *http.Request) {
     <tr>
       <th>
         <%= t(req, "Redis RTT") %>
-        <a href="https://github.com/contribsys/faktory/wiki/Storage#rtt"><span class="info-circle" title="Click to learn more about RTT">?</span></a>
+        <a href="https://github.com/yvjessestephens/faktory/wiki/Storage#rtt"><span class="info-circle" title="Click to learn more about RTT">?</span></a>
       </th>
       <td class="fw-bold text-<%= category_for_rtt(rtt) %>">
         <%= rtt %> µs

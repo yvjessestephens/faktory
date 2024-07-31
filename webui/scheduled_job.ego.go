@@ -13,7 +13,7 @@ import "context"
 import (
 	"net/http"
 
-	"github.com/contribsys/faktory/client"
+	"github.com/yvjessestephens/faktory/client"
 )
 
 func ego_scheduled_job(w io.Writer, req *http.Request, key string, job *client.Job) {

@@ -4,10 +4,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/contribsys/faktory/cli"
-	"github.com/contribsys/faktory/client"
-	"github.com/contribsys/faktory/util"
-	"github.com/contribsys/faktory/webui"
+	"github.com/yvjessestephens/faktory/cli"
+	"github.com/yvjessestephens/faktory/client"
+	"github.com/yvjessestephens/faktory/util"
+	"github.com/yvjessestephens/faktory/webui"
 )
 
 func logPreamble() {
@@ -45,9 +45,9 @@ func main() {
 	go cli.HandleSignals(s)
 	go func() {
 		err = s.Run()
-                if err != nil {
-                  util.Error("Unable to start Faktory", err)
-                }
+		if err != nil {
+			util.Error("Unable to start Faktory", err)
+		}
 	}()
 
 	<-s.Stopper()

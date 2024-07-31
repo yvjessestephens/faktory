@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/contribsys/faktory/util"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 type BatchStatus struct {

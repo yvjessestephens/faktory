@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/contribsys/faktory/client"
 	"github.com/stretchr/testify/assert"
+	"github.com/yvjessestephens/faktory/client"
 )
 
 // Since tests are run in parallel, better use test functions names (at least)
@@ -51,7 +51,7 @@ func TestBatches(t *testing.T) {
 	// """Note that, once committed, only a job within the batch may reopen it.
 	// Faktory will return an error if you dynamically add jobs from "outside" the batch;
 	// this is to prevent a race condition between callbacks firing and an outsider adding more jobs."""
-	// Ref: https://github.com/contribsys/faktory/wiki/Ent-Batches#batch-open-bid
+	// Ref: https://github.com/yvjessestephens/faktory/wiki/Ent-Batches#batch-open-bid
 
 	// let's try to open an already committed batch
 	reOpenedBatch, reOpenError := cl.BatchOpen(openedBatch.Bid)
@@ -87,7 +87,7 @@ func TestBatches(t *testing.T) {
 
 	// From the docs:
 	// """Once a callback has enqueued for a batch, you may not add anything to the batch."""
-	// ref: https://github.com/contribsys/faktory/wiki/Ent-Batches#guarantees
+	// ref: https://github.com/yvjessestephens/faktory/wiki/Ent-Batches#guarantees
 
 	// Let's consume the jobs from the out nested batch and make Faktory fire those
 	// "OnNestedComplete" callback and "OnNestedSuccess" callback

@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/contribsys/faktory/util"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 // This represents a single client process.  It may have many network

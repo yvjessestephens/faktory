@@ -11,8 +11,8 @@ import "io"
 import "context"
 
 import (
-	"github.com/contribsys/faktory/client"
-	"github.com/contribsys/faktory/util"
+	"github.com/yvjessestephens/faktory/client"
+	"github.com/yvjessestephens/faktory/util"
 	"net/http"
 )
 

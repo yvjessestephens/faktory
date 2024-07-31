@@ -14,7 +14,7 @@ import (
 	"net/http"
 	"runtime"
 
-	"github.com/contribsys/faktory/client"
+	"github.com/yvjessestephens/faktory/client"
 )
 
 func ego_debug(w io.Writer, req *http.Request) {
@@ -60,7 +60,7 @@ func ego_debug(w io.Writer, req *http.Request) {
 //line debug.ego:29
 		})
 //line debug.ego:30
-		_, _ = io.WriteString(w, "\n          </select>\n          <span style=\"font-size: small\">\n            Want to help us improve the translations?\n            <a href=\"https://github.com/contribsys/faktory/tree/master/webui/static/locales\">Submit a PR</a>.\n          </span>\n        </td>\n    </tr>\n    <tr>\n      <th>")
+		_, _ = io.WriteString(w, "\n          </select>\n          <span style=\"font-size: small\">\n            Want to help us improve the translations?\n            <a href=\"https://github.com/yvjessestephens/faktory/tree/master/webui/static/locales\">Submit a PR</a>.\n          </span>\n        </td>\n    </tr>\n    <tr>\n      <th>")
 //line debug.ego:38
 		_, _ = io.WriteString(w, html.EscapeString(fmt.Sprint(t(req, "Version"))))
 //line debug.ego:38
@@ -132,7 +132,7 @@ func ego_debug(w io.Writer, req *http.Request) {
 //line debug.ego:68
 		_, _ = io.WriteString(w, html.EscapeString(fmt.Sprint(t(req, "Redis RTT"))))
 //line debug.ego:69
-		_, _ = io.WriteString(w, "\n        <a href=\"https://github.com/contribsys/faktory/wiki/Storage#rtt\"><span class=\"info-circle\" title=\"Click to learn more about RTT\">?</span></a>\n      </th>\n      <td class=\"fw-bold text-")
+		_, _ = io.WriteString(w, "\n        <a href=\"https://github.com/yvjessestephens/faktory/wiki/Storage#rtt\"><span class=\"info-circle\" title=\"Click to learn more about RTT\">?</span></a>\n      </th>\n      <td class=\"fw-bold text-")
 //line debug.ego:71
 		_, _ = io.WriteString(w, html.EscapeString(fmt.Sprint(category_for_rtt(rtt))))
 //line debug.ego:71

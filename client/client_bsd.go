@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/contribsys/faktory/util"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 func RssKb() int64 {

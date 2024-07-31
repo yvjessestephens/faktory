@@ -7,7 +7,7 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/contribsys/faktory/manager"
+	"github.com/yvjessestephens/faktory/manager"
 )
 
 // Represents a connection to a faktory client.

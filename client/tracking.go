@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/contribsys/faktory/util"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 type JobTrack struct {

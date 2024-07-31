@@ -8,10 +8,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/contribsys/faktory/server"
-	"github.com/contribsys/faktory/storage"
-	"github.com/contribsys/faktory/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/yvjessestephens/faktory/server"
+	"github.com/yvjessestephens/faktory/storage"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 func TestLiveServer(t *testing.T) {

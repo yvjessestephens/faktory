@@ -13,8 +13,8 @@ import "context"
 import (
 	"net/http"
 
-	"github.com/contribsys/faktory/manager"
-	"github.com/contribsys/faktory/server"
+	"github.com/yvjessestephens/faktory/manager"
+	"github.com/yvjessestephens/faktory/server"
 )
 
 func ego_busy(w io.Writer, req *http.Request) {

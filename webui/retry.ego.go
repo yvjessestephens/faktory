@@ -13,7 +13,7 @@ import "context"
 import (
 	"net/http"
 
-	"github.com/contribsys/faktory/client"
+	"github.com/yvjessestephens/faktory/client"
 )
 
 func ego_retry(w io.Writer, req *http.Request, key string, retry *client.Job) {

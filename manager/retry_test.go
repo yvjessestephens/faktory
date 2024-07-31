@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/contribsys/faktory/client"
-	"github.com/contribsys/faktory/storage"
 	"github.com/stretchr/testify/assert"
+	"github.com/yvjessestephens/faktory/client"
+	"github.com/yvjessestephens/faktory/storage"
 )
 
 func TestRetry(t *testing.T) {

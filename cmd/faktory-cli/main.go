@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/contribsys/faktory/client"
+	"github.com/yvjessestephens/faktory/client"
 )
 
 func main() {

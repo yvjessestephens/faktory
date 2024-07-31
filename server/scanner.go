@@ -5,8 +5,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/contribsys/faktory/storage"
-	"github.com/contribsys/faktory/util"
+	"github.com/yvjessestephens/faktory/storage"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 type scannerTask func(context.Context, time.Time) (int64, error)

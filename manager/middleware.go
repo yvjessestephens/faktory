@@ -3,7 +3,7 @@ package manager
 import (
 	"context"
 
-	"github.com/contribsys/faktory/client"
+	"github.com/yvjessestephens/faktory/client"
 )
 
 type MiddlewareFunc func(ctx context.Context, next func() error) error

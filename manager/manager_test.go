@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/contribsys/faktory/client"
-	"github.com/contribsys/faktory/storage"
-	"github.com/contribsys/faktory/util"
 	"github.com/stretchr/testify/assert"
+	"github.com/yvjessestephens/faktory/client"
+	"github.com/yvjessestephens/faktory/storage"
+	"github.com/yvjessestephens/faktory/util"
 )
 
 func TestManagerBasics(t *testing.T) {

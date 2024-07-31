@@ -1,6 +1,6 @@
 package server
 
-import "github.com/contribsys/faktory/util"
+import "github.com/yvjessestephens/faktory/util"
 
 var DefaultMaxPoolSize = 2000
 
