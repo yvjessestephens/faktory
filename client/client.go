@@ -209,7 +209,7 @@ type HIv2 struct {
 
 // dial connects to the remote faktory server.
 func dial(srv *Server, password string, dialer Dialer) (*Client, error) {
-	println("yv faktory/client/client.go > dial")
+	println("yv faktory/client/client.go > dial: entry")
 	client := emptyClientData()
 	client.Username = srv.Username
 
@@ -218,10 +218,12 @@ func dial(srv *Server, password string, dialer Dialer) (*Client, error) {
 
 	conn, err = dialer.Dial("tcp", srv.Address)
 	if err != nil {
+		fmt.Printf("yv faktory/client/client.go > dial: err: %s \n", err.Error())
 		return nil, err
 	}
-	fmt.Printf("yv faktory/client/client.go > Open line224 conn.LocalAddr %s conn.RemoteAddr %s", conn.LocalAddr().String(), conn.RemoteAddr().String())
-	util.Infof("yv faktory/client/client.go line224 conn.LocalAddr %s conn.RemoteAddr %s", conn.LocalAddr().String(), conn.RemoteAddr().String())
+	// conn.LocalAddr is the client's IP
+	// conn.RemoteAddr is the Faktory Server pod's IP
+	fmt.Printf("yv faktory/client/client.go > dial: connected %s (me) -> %s\n", conn.LocalAddr().String(), conn.RemoteAddr().String())
 	if x, ok := conn.(*net.TCPConn); ok {
 		_ = x.SetKeepAlive(true)
 	}

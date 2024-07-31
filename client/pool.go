@@ -19,7 +19,7 @@ type Pool struct {
 //
 // The dialer clients in this pool use is determined by the URI scheme in FAKTORY_PROVIDER.
 func NewPool(capacity int) (*Pool, error) {
-	println("yv faktory/client/pool.go > NewPool")
+	println("yv faktory/client/pool.go > NewPool: entry")
 	return newPool(capacity, func() (pool.Closeable, error) { return Open() })
 }
 
@@ -32,6 +32,7 @@ func NewPoolWithDialer(capacity int, dialer Dialer) (*Pool, error) {
 
 // newPool creates a *Pool channel with the provided capacity and opener.
 func newPool(capacity int, opener pool.Factory) (*Pool, error) {
+	println("yv faktory/internal/pool/pool.go > newPool: entry")
 	var p Pool
 	var err error
 	p.Pool, err = pool.NewChannelPool(0, capacity, opener)
@@ -41,6 +42,7 @@ func newPool(capacity int, opener pool.Factory) (*Pool, error) {
 // Get retrieves a Client from the pool. This Client is created, internally, by calling
 // the Open() function, and has all the same behaviors.
 func (p *Pool) Get() (*Client, error) {
+	println("yv faktory/internal/pool/pool.go > Get: entry")
 	conn, err := p.Pool.Get()
 	if err != nil {
 		return nil, err
