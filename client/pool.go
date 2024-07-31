@@ -19,6 +19,7 @@ type Pool struct {
 //
 // The dialer clients in this pool use is determined by the URI scheme in FAKTORY_PROVIDER.
 func NewPool(capacity int) (*Pool, error) {
+	println("yv faktory/client/pool.go > NewPool")
 	return newPool(capacity, func() (pool.Closeable, error) { return Open() })
 }
 
