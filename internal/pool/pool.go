@@ -113,7 +113,7 @@ type Factory func() (Closeable, error)
 // available in the pool, a new connection will be created via the Factory()
 // method.
 func NewChannelPool(initialCap, maxCap int, factory Factory) (Pool, error) {
-	println("yv faktory/internal/pool/pool.go > NewChannelPool: entry")
+	// println("yv faktory/internal/pool/pool.go > NewChannelPool: entry") // jesses debug
 	if initialCap < 0 || maxCap <= 0 || initialCap > maxCap {
 		return nil, errors.New("invalid capacity settings")
 	}
@@ -123,12 +123,12 @@ func NewChannelPool(initialCap, maxCap int, factory Factory) (Pool, error) {
 		factory: factory,
 	}
 
-	println("yv faktory/internal/pool/pool.go > NewChannelPool: create initial connections")
+	// println("yv faktory/internal/pool/pool.go > NewChannelPool: create initial connections") // jesses debug
 	// create initial connections, if something goes wrong,
 	// just close the pool error out.
 	for i := 0; i < initialCap; i++ {
 		conn, err := factory()
-		println("yv faktory/internal/pool/pool.go > NewChannelPool: create connection")
+		// println("yv faktory/internal/pool/pool.go > NewChannelPool: create connection") // jesses debug
 		if err != nil {
 			c.Close()
 			return nil, fmt.Errorf("factory is not able to fill the pool: %w", err)

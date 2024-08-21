@@ -92,7 +92,7 @@ func (s *Server) OpenWithDialer(dialer Dialer) (*Client, error) {
 }
 
 func (s *Server) Open() (*Client, error) {
-	println("yv faktory/client/client.go > (*Server) Open")
+	// println("yv faktory/client/client.go > (*Server) Open") // jesses debug
 	return Dial(s, s.Password)
 }
 
@@ -159,7 +159,7 @@ func DefaultServer() *Server {
 // By default Open assumes localhost with no password
 // which is appropriate for local development.
 func Open() (*Client, error) {
-	println("yv faktory/client/client.go > Open")
+	// println("yv faktory/client/client.go > Open") // jesses debug
 	srv := DefaultServer()
 	if err := srv.ReadFromEnv(); err != nil {
 		return nil, fmt.Errorf("cannot read configuration from env: %w", err)
@@ -187,7 +187,7 @@ func OpenWithDialer(dialer Dialer) (*Client, error) {
 //
 //	client.Dial(client.Localhost, "topsecret")
 func Dial(srv *Server, password string) (*Client, error) {
-	println("yv faktory/client/client.go > Dial")
+	// println("yv faktory/client/client.go > Dial") // jesses debug
 	d := &net.Dialer{Timeout: srv.Timeout}
 	dialer := Dialer(d)
 	if srv.Network == "tcp+tls" {
@@ -209,7 +209,7 @@ type HIv2 struct {
 
 // dial connects to the remote faktory server.
 func dial(srv *Server, password string, dialer Dialer) (*Client, error) {
-	println("yv faktory/client/client.go > dial: entry")
+	// println("yv faktory/client/client.go > dial: entry") // jesses debug
 	client := emptyClientData()
 	client.Username = srv.Username
 
@@ -218,12 +218,12 @@ func dial(srv *Server, password string, dialer Dialer) (*Client, error) {
 
 	conn, err = dialer.Dial("tcp", srv.Address)
 	if err != nil {
-		fmt.Printf("yv faktory/client/client.go > dial: err: %s \n", err.Error())
+		fmt.Printf("yv faktory/client/client.go > dial: err: %s \n", err.Error()) // jesses debug
 		return nil, err
 	}
 	// conn.LocalAddr is the client's IP
 	// conn.RemoteAddr is the Faktory Server pod's IP
-	fmt.Printf("yv faktory/client/client.go > dial: connected %s (me) -> %s\n", conn.LocalAddr().String(), conn.RemoteAddr().String())
+	fmt.Printf("yv faktory/client/client.go > dial: connected %s (me) -> %s\n", conn.LocalAddr().String(), conn.RemoteAddr().String()) // jesses debug, this is a gooood one
 	if x, ok := conn.(*net.TCPConn); ok {
 		_ = x.SetKeepAlive(true)
 	}
